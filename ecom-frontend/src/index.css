@@ -1,0 +1,110 @@
+/* Modern CSS Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+/* Theme Variables */
+.dark-theme {
+  --root_background: #0f172a;
+  --body_background: #0f172a;
+  --navbar_background: rgba(15, 23, 42, 0.95);
+  --navbar_text: #f1f5f9;
+  --body_color: #1e293b;
+  --link_color: #f1f5f9;
+  --link_hover_color: #60a5fa;
+  --link_visited_color: #a855f7;
+  --para-clr: #e2e8f0;
+  --cart_body_color: #1e293b;
+  --quantity-clr: #f1f5f9;
+  --button-clr: #f1f5f9;
+  --card-bg-clr: #1e293b;
+  --btn-bg: #3b82f6;
+  --btn-clr: #ffffff;
+  --category-hvr: #334155;
+  --search_result-bg: #334155;
+  --hr_line_card: #475569;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --border-color: #334155;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+}
+
+.light-theme {
+  --root_background: #ffffff;
+  --body_background: #f8fafc;
+  --navbar_background: rgba(255, 255, 255, 0.95);
+  --navbar_text: #1e293b;
+  --body_color: #ffffff;
+  --link_color: #1e293b;
+  --link_hover_color: #3b82f6;
+  --link_visited_color: #8b5cf6;
+  --para-clr: #475569;
+  --cart_body_color: #ffffff;
+  --quantity-clr: #1e293b;
+  --button-clr: #1e293b;
+  --card-bg-clr: #ffffff;
+  --btn-bg: #3b82f6;
+  --btn-clr: #ffffff;
+  --category-hvr: #f1f5f9;
+  --search_result-bg: #f8fafc;
+  --hr_line_card: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-color: #e2e8f0;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+}
+
+:root {
+  background-color: var(--body_background);
+  color: var(--para-clr);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Improved focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--link_hover_color);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--body_background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--para-clr);
+}
